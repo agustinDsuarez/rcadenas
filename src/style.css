@@ -293,6 +293,7 @@ body {
   border: 1px solid black;
   border-bottom: transparent;
   padding-bottom: 1.65em;
+  color: var(--negro-violacio);
 }
 
 @media (max-width: 47em) {
@@ -318,8 +319,8 @@ body {
     max-width: 15rem;
     height: 100em;
     margin-right: 0em;
-    background: rgba(255, 200, 57, 0.5);
-    backdrop-filter: blur(1.5rem);
+    background: oklab(70.514% 0.1457 0.12775);
+    backdrop-filter: blur(1.2em);
     border-radius: 1em;
     border: 1.5px solid black;
     box-shadow: 0 0 0.25em rgb(0, 0, 0, 0.5);
@@ -348,7 +349,7 @@ body {
   }
 
   .nav-list a:hover {
-    background: var(--naranja);
+    background: var(--blanco);
     border: 1px solid black;
     border-radius: 1em;
     padding: .8em;
@@ -367,13 +368,11 @@ body {
     z-index: 100;
     cursor: pointer;
     background: transparent;
-    border: 0;
-    padding: 0.5em;
+    padding: .7em;
     width: 1.65rem;
     aspect-ratio: 1;
     transition: .3s;
-    border: 2px solid var(--naranja);
-    border-radius: 50%;
+    border: 0;
     background-image: url(images/iconos/icon-hamburger.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -464,12 +463,14 @@ body {
 
 /* galeria */
 #galeria {
-  background-image: url(images/galeria/arquitectura-4.jpg);
+  background: url(images/galeria/arquitectura-4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .galeria-titulo_wrapper {
   background-color: transparent;
   width: 100%;
-  height: 500px;
+  height: 200px;
 }
 
 .galeria-titulo {
@@ -481,9 +482,67 @@ body {
   padding: 2em;
 }
 
+@media (max-width: 47em) {
+  .galeria-titulo_wrapper {
+    background-color: transparent;
+    width: 100%;
+    height: 320px;
+  }
+
+  .galeria-titulo h2 {
+    text-align: center;
+    line-height: 2em;
+  }
+
+  .galeria-titulo {
+    display: block;
+    font-size: 1.3em;
+    text-align: justify;
+    line-height: 1.8em;
+  }
+}
+
+.galeria-imagenes {
+  columns: 3;
+  column-gap: 1.2em;
+}
+
+.galeria-imagenes div {
+  margin-bottom: 1.2em;
+}
+
+.galeria-imagenes div img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.galeria-imagenes div img:hover {
+  transform: scale(1.5);
+  z-index: 9999999;
+}
+
+@media (max-width: 47em) {
+  .galeria-imagenes {
+    columns: 2;
+    column-gap: 1em;
+  }
+  .galeria-imagenes div {
+    margin-bottom: 1em;
+  }
+
+  .galeria-imagenes div img {
+    margin-bottom: -2px;
+  }
+}
+
 /* acerca */
+#acerca {
+  background: url(images/galeria/book-5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .acerca {
-  background: url(images/galeria/arquitectura-1.jpg);
   background-position: center;
   background-size: cover;
   height: 1100px;
@@ -613,6 +672,24 @@ body {
     padding: 1em;
     gap: 1em;
   }
+}
+
+.footer_wrapper {
+  margin-top: 5em;
+  backdrop-filter: blur(5px);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  backdrop-filter: blur(5px);
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--amarillo);
 }
 
 /* clases de utilidad */
