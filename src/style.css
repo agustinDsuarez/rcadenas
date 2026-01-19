@@ -15,6 +15,13 @@
   --negro-violacio: #1A1724;
   --azul: #0F52BB;
 
+  /* colores secundarios */
+  --blanco: #FEFEFE;
+  --mostaza: #F6C855;
+  --cielo: #36AAF9;
+  --cielo-oscuro: #588CCC;
+  --rojo-fuerte: #D51B28;
+
    /* tamaños fuente */
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
@@ -158,7 +165,7 @@ html {
 
 body {
   color: white;
-  background-color: #FDE8A7/*rgba(16, 16, 16)*/;
+  background-color: var(--blanco);
   font-family: var(--primary-font);
 }
 
@@ -247,8 +254,8 @@ body {
   font-size: 1.3em;
   padding-left: 1em;
   padding-right: 1em;
-  /*background: rgba(255, 200, 57, 0.5);*/
-  backdrop-filter: blur(.8rem);
+  background: rgba(255, 255, 255,0.01);
+  backdrop-filter: blur(2px);
   color: var(--negro-violacio);
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
@@ -365,6 +372,8 @@ body {
     width: 1.65rem;
     aspect-ratio: 1;
     transition: .3s;
+    border: 2px solid var(--naranja);
+    border-radius: 50%;
     background-image: url(images/iconos/icon-hamburger.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -377,9 +386,6 @@ body {
 }
 
 /* hero */
-
-/* slider */
-
 .hero {
   background: url(images/galeria/book-1.jpg) no-repeat;
   background-position: center;
@@ -454,6 +460,25 @@ body {
 .hero a:hover {
   background: var(--azul);
   color: white;
+}
+
+/* galeria */
+#galeria {
+  background-image: url(images/galeria/arquitectura-4.jpg);
+}
+.galeria-titulo_wrapper {
+  background-color: transparent;
+  width: 100%;
+  height: 500px;
+}
+
+.galeria-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  line-height: 2em;
+  padding: 2em;
 }
 
 /* acerca */
