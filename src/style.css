@@ -533,6 +533,10 @@ body {
   .galeria-imagenes div img {
     margin-bottom: -2px;
   }
+  .galeria-imagenes div img:hover {
+  transform: scale(4);
+  z-index: 9999999;
+}
 }
 
 /* acerca */
