@@ -546,6 +546,20 @@ body {
   background-position: center;
 }
 
+@media (max-width: 47em) {
+  #acerca {
+  background: url(images/galeria/book-5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+}
+
+@media (max-width: 1280px) {
+  #acerca {
+    background: url(images/galeria/book-5.jpg);
+  }
+}
+
 .acerca {
   background-position: center;
   background-size: cover;
@@ -581,7 +595,13 @@ body {
   gap: 1em;
   padding: 9em;
   line-height: 2em;
+  text-align: justify;
 }
+
+.acerca-titulo:nth-last-child {
+  text-align: center;
+}
+
 
 @media (max-width: 47em) {
   .acerca {
@@ -594,11 +614,12 @@ body {
     width: auto;
     border-radius: 1em;
     backdrop-filter: blur(.8rem);
+    height: 1000px;
   }
 
   .acerca-imagen {
   height: 600px;
-  width: 260px;
+  width: 280px;
   margin: auto;
   border-top-left-radius: 0;
   border-bottom-left-radius: 1em;
@@ -606,7 +627,7 @@ body {
 }
 
   .acerca-titulo {
-    text-align: center;
+    
     padding: 3em;
   }
 
@@ -679,7 +700,7 @@ body {
 }
 
 .footer_wrapper {
-  margin-top: 5em;
+  margin-top: 10em;
   backdrop-filter: blur(5px);
 }
 
